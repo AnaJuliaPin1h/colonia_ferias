@@ -173,4 +173,4 @@ pip freeze > requirements.txt
 
 ## 👩‍💻 Autora
 
-Desenvolvido por **Ana Julia**
+Desenvolvido por **Ana Julia Pinheiro**
