@@ -1,0 +1,194 @@
+/* ── Reset e base ─────────────────────────────────────────────── */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* ── Títulos ──────────────────────────────────────────────────── */
+h1 {
+  text-align: center;
+  color: #1f3c88;
+}
+
+h2 {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* ── Tabela de preços ─────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+table th {
+  background: #1f3c88;
+  color: white;
+}
+
+table tbody tr:hover {
+  background: #eef3ff;  /* ✅ destaca linha ao passar o mouse */
+}
+
+/* ── Formulário ───────────────────────────────────────────────── */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #1f3c88;  /* ✅ destaca campo ativo */
+  box-shadow: 0 0 0 3px rgba(31,60,136,0.1);
+}
+
+/* ── Botão submit ─────────────────────────────────────────────── */
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 14px;
+  background: #1f3c88;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #162d66;
+}
+
+button[type="submit"]:disabled {
+  background: #8a9cc7;  /* ✅ feedback visual de carregando */
+  cursor: not-allowed;
+}
+
+/* ── Área de resultado ────────────────────────────────────────── */
+.resultado {
+  margin-top: 30px;
+  border-radius: 10px;
+  /* ✅ removido display:none — o JS controla o conteúdo */
+}
+
+.resultado:empty {
+  display: none;  /* ✅ some quando não tem nada */
+}
+
+/* ── Prévia de valor ──────────────────────────────────────────── */
+.preview {
+  padding: 14px 18px;
+  background: #fff8e1;
+  border-left: 4px solid #f5a623;
+  border-radius: 8px;
+  color: #7a5c00;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ── Caixa de sucesso ─────────────────────────────────────────── */
+.sucesso {
+  padding: 20px;
+  background: #eef3ff;
+  border-left: 4px solid #1f3c88;
+  border-radius: 10px;
+}
+
+.sucesso h3 {
+  margin-top: 0;
+  color: #1f3c88;
+}
+
+.sucesso p {
+  margin: 6px 0;
+  color: #333;
+}
+
+/* ── Botão PDF ────────────────────────────────────────────────── */
+.btn-pdf {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #27ae60;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.btn-pdf:hover {
+  background: #1e8449;
+}
+
+/* ── Caixa de erro ────────────────────────────────────────────── */
+.erro {
+  padding: 16px 20px;
+  background: #fff0f0;
+  border-left: 4px solid #e74c3c;
+  border-radius: 8px;
+  color: #c0392b;
+}
+
+.erro ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.erro li {
+  margin-bottom: 4px;
+}
+
+/* ── Responsivo ───────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  body {
+    padding: 16px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

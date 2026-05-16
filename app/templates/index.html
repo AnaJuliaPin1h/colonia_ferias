@@ -1,0 +1,60 @@
+{# REMOVA essa linha do topo #}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Reservas</title>
+
+  {% load static %}  {# Mantém só aqui dentro do <head> #}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+
+<body>
+<div class="container">
+  <h1>Sistema de Reservas</h1>
+  <h2>Colônia de Férias Corporativa</h2>
+
+  <div class="tabela">
+    <table>
+      <thead>
+        <tr><th>Pessoas</th><th>Tipo 1 (diária)</th><th>Tipo 2 (diária)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>R$ 20,00</td><td>R$ 25,00</td></tr>
+        <tr><td>2</td><td>R$ 28,00</td><td>R$ 34,00</td></tr>
+        <tr><td>3</td><td>R$ 35,00</td><td>R$ 42,00</td></tr>
+        <tr><td>4</td><td>R$ 42,00</td><td>R$ 50,00</td></tr>
+        <tr><td>5</td><td>R$ 48,00</td><td>R$ 57,00</td></tr>
+        <tr><td>6</td><td>R$ 53,00</td><td>R$ 63,00</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <form id="reservaForm">
+    <label>Nome do responsável</label>
+    <input type="text" id="nome" required>
+
+    <label>Tipo do apartamento</label>
+    <select id="tipo">
+      <option value="1">Tipo 1</option>
+      <option value="2">Tipo 2</option>
+    </select>
+
+    <label>Número de pessoas</label>
+    <input type="number" id="pessoas" min="1" max="6" required>
+
+    <label>Número de dias</label>
+    <input type="number" id="dias" min="1" max="7" required>
+
+    <button type="submit" id="btnSubmit">Calcular Reserva</button>
+  </form>
+
+  <div id="resultado" class="resultado"></div>
+</div>
+
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>
