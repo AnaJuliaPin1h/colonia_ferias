@@ -6,7 +6,7 @@ SECRET_KEY = 'django-insecure-j_^&gk-c!h_lb45k*ld480%b9r6cm=q(3yj4x^u$3@i9s%-ddv
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']  # Em produção, coloque o domínio real
+ALLOWED_HOSTS = ['*']  # Em produção, colocar o domínio real
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -17,9 +17,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # DRF
     'rest_framework',
-    # CORS (se usar frontend separado)
+    # CORS 
     'corsheaders',
-    # Sua app
+    # app
     'app',
 ]
 
@@ -53,7 +53,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'reservas.wsgi.application'
 
-# Banco de dados — escolha UM dos dois abaixo
+# Banco de dados — sql lite ou my
 
 # Opção 1: SQLite (mais simples para desenvolvimento)
 DATABASES = {
@@ -69,7 +69,7 @@ DATABASES = {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'colonia_ferias',
 #         'USER': 'root',
-#         'PASSWORD': 'sua_senha',
+#         'PASSWORD': 'minha_senha',
 #         'HOST': 'localhost',
 #         'PORT': '3306',
 #     }
@@ -82,13 +82,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-LANGUAGE_CODE = 'pt-br'  # corrigido para português
+LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Sao_Paulo'  # corrigido para o fuso do Brasil
 USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']  # aponta para sua pasta static/
+STATICFILES_DIRS = [BASE_DIR / 'static']  # aponta para a pasta static/   IMPORTANTE
 STATIC_ROOT = BASE_DIR / 'staticfiles' 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
